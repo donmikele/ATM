@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller" >
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#menuClearClicked" text="Clear" />
+                  <MenuItem mnemonicParsing="false" onAction="#menuAuthorClicked" text="Author" />
+                  <MenuItem mnemonicParsing="false" onAction="#menuExitClicked" text="Exit" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <HBox alignment="BOTTOM_LEFT" prefHeight="116.0" prefWidth="800.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="36.0" prefWidth="159.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="User1" wrappingWidth="39.6708984375" />
+               </children>
+            </VBox>
+            <Separator orientation="VERTICAL" />
+            <Region prefHeight="34.0" prefWidth="534.0" HBox.hgrow="ALWAYS" />
+            <Separator orientation="VERTICAL" />
+            <VBox alignment="CENTER" prefHeight="36.0" prefWidth="159.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="User2" wrappingWidth="40.6708984375" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox prefHeight="593.0" prefWidth="800.0" VBox.vgrow="ALWAYS">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="513.0" prefWidth="150.0">
+               <children>
+                  <Separator prefWidth="200.0" />
+                  <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="In bank:" />
+                        <Text fx:id="cashUser1" strokeType="OUTSIDE" strokeWidth="0.0" text=""/>
+                     </children>
+                  </HBox>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Log:" />
+                  <VBox alignment="TOP_CENTER" prefHeight="460.0" prefWidth="194.0">
+                     <children>
+                        <Text fx:id="logUser1" strokeType="OUTSIDE" strokeWidth="0.0" text=""/>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="568.0" prefWidth="230.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Separator prefWidth="200.0" />
+                  <HBox alignment="CENTER_LEFT" prefHeight="189.0" prefWidth="184.0">
+                     <children>
+                        <Separator orientation="VERTICAL" prefHeight="169.0" prefWidth="0.0" />
+                        <TextField fx:id="depositUser1Field" prefHeight="31.0" prefWidth="80.0" />
+                        <Button mnemonicParsing="false" onAction="#depositUser1" prefHeight="30.0" prefWidth="107.0" text="Deposit" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="189.0" prefWidth="184.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <TextField fx:id="transferUser1Field" prefHeight="31.0" prefWidth="80.0" />
+                        <Button mnemonicParsing="false" onAction="#transferUser1" prefHeight="30.0" prefWidth="107.0" text="Transfer" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="189.0" prefWidth="184.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" HBox.hgrow="ALWAYS" />
+                        <TextField fx:id="withdrawUser1Field" prefHeight="31.0" prefWidth="80.0" />
+                        <Button mnemonicParsing="false" onAction="#withdrawUser1" prefHeight="30.0" prefWidth="107.0" text="Withdraw" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Separator prefWidth="200.0" />
+                  <Region prefHeight="541.0" prefWidth="88.0" />
+               </children>
+            </VBox>
+            <VBox prefHeight="568.0" prefWidth="230.0">
+               <children>
+                  <Separator prefWidth="200.0" />
+                  <HBox alignment="CENTER_RIGHT" prefHeight="189.0" prefWidth="250.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#depositUser2" prefHeight="30.0" prefWidth="107.0" text="Deposit" />
+                        <TextField fx:id="depositUser2Field" prefHeight="31.0" prefWidth="80.0" />
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="189.0" prefWidth="184.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#transferUser2" prefHeight="30.0" prefWidth="107.0" text="Transfer" />
+                        <TextField fx:id="transferUser2Field" prefHeight="31.0" prefWidth="80.0" />
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="189.0" prefWidth="184.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#withdrawUser2" prefHeight="30.0" prefWidth="107.0" text="Withdraw" />
+                        <TextField fx:id="withdrawUser2Field" prefHeight="31.0" prefWidth="80.0" />
+                        <Separator orientation="VERTICAL" prefHeight="154.0" prefWidth="0.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="513.0" prefWidth="150.0">
+               <children>
+                  <Separator prefWidth="200.0" />
+                  <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="In bank:" />
+                        <Text fx:id="cashUser2" strokeType="OUTSIDE" strokeWidth="0.0" text=""/>
+                     </children>
+                  </HBox>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Log:" textAlignment="CENTER" />
+                  <VBox alignment="TOP_CENTER" prefHeight="460.0" prefWidth="150.0">
+                     <children>
+                        <Text fx:id="logUser2" strokeType="OUTSIDE" strokeWidth="0.0" text=""/>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+         <children>
+            <VBox alignment="CENTER" prefHeight="20.0" prefWidth="855.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Separator prefHeight="0.0" prefWidth="800.0" />
+                  <Text fill="#a1a0a0" strokeType="OUTSIDE" strokeWidth="0.0" text="Copyright by Michał Kaczyński 2018 PROJECT PW " VBox.vgrow="ALWAYS" />
+               </children>
+            </VBox>
+         </children></HBox>
+   </children>
+</VBox>
